@@ -1,0 +1,153 @@
+﻿<Window x:Class="ZoomExample.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:local="clr-namespace:ZoomExample"
+        xmlns:B="http://schemas.microsoft.com/xaml/behaviors"
+        Title="MainWindow" Height="500" Width="1000">
+
+    <B:Interaction.Triggers>
+        <B:EventTrigger EventName="Loaded">
+            <B:CallMethodAction MethodName="Windows_Loaded" TargetObject="{Binding}"/>
+        </B:EventTrigger>
+        <B:EventTrigger EventName="SizeChanged">
+            <B:CallMethodAction MethodName="Window_SizeChanged" TargetObject="{Binding}"/>
+        </B:EventTrigger>
+    </B:Interaction.Triggers>
+
+
+    <Window.DataContext>
+        <local:MainWindowVM/>
+    </Window.DataContext>
+    <Window.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="Resources.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Window.Resources>
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition Width="Auto"/>
+        </Grid.ColumnDefinitions>
+
+        <Grid Grid.Column="1">
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+            
+
+            <Canvas Name="CanvasImplant" 
+                    Width="{Binding Path=Cwidth}" 
+                    Height="{Binding Path=CHeight}"
+                VerticalAlignment="Stretch"
+                    HorizontalAlignment="Stretch"
+                    Grid.Row="1"
+
+                    Background="Black">
+
+                <B:Interaction.Triggers>
+                    <B:EventTrigger EventName="MouseMove">
+                        <B:CallMethodAction MethodName="CanvasImplant_MouseMove" TargetObject="{Binding}"/>
+
+                    </B:EventTrigger>
+                    <B:EventTrigger EventName="MouseUp">
+                        <B:CallMethodAction MethodName="CanvasImplant_MouseUp" TargetObject="{Binding}"/>
+
+                    </B:EventTrigger>
+                </B:Interaction.Triggers>
+
+                <Image  Source="{Binding Path=image}" Stretch="Uniform" Width="{Binding Path=Iwidth1}" Height="{Binding Path=Iheight1}" Canvas.Left="{Binding Path=Cleft1}" Canvas.Top="{Binding Path=Ctop1}"/>
+                <Image  Source="{Binding Path=image}" Stretch="Uniform" Canvas.Left="{Binding Path=Cleft2}" Canvas.Top="{Binding Path=Ctop2}" Width="{Binding Path=Iwidth2}" Height="{Binding Path=Iheight2}"/>
+                <Image  Source="{Binding Path=image}" Stretch="Uniform" Canvas.Left="{Binding Path=Cleft3}" Canvas.Top="{Binding Path=Ctop3}" Width="{Binding Path=Iwidth3}" Height="{Binding Path=Iheight3}"/>
+
+
+                <Rectangle x:Name="MovableShape" Fill="Transparent " 
+                           Stroke="Red"  Grid.Row="1" Width="{Binding Path=Recwidth}" Height="{Binding Path=RecHeight}" 
+                           StrokeThickness="1" 
+                           Canvas.Left="{Binding Path=RecLeft}" Canvas.Top="{Binding Path=RecUp}">
+                    <B:Interaction.Triggers>
+                        <B:EventTrigger EventName="MouseDown">
+                            <B:CallMethodAction MethodName="MovableShape_MouseDown" TargetObject="{Binding}"/>
+                        </B:EventTrigger>
+                    </B:Interaction.Triggers>
+                </Rectangle>
+            </Canvas>
+        </Grid>
+
+
+
+
+        
+            <ScrollViewer Name="scrollViewer" VerticalScrollBarVisibility="Visible" HorizontalScrollBarVisibility="Visible"  >
+                <B:Interaction.Triggers>
+                    <B:EventTrigger EventName="PreviewMouseLeftButtonDown">
+                        <B:CallMethodAction MethodName="OnMouseLeftButtonDown" TargetObject="{Binding}"/>
+                    </B:EventTrigger>
+                    <B:EventTrigger EventName="ScrollChanged">
+                        <B:CallMethodAction MethodName="OnScrollViewerScrollChanged" TargetObject="{Binding}"/>
+                    </B:EventTrigger>
+                    <B:EventTrigger EventName="MouseLeftButtonUp">
+                        <B:CallMethodAction MethodName="OnMouseLeftButtonUp" TargetObject="{Binding}"/>
+                    </B:EventTrigger>
+                    <B:EventTrigger EventName="PreviewMouseWheel">
+                        <B:CallMethodAction MethodName="OnPreviewMouseWheel" TargetObject="{Binding}"/>
+                    </B:EventTrigger>
+                <B:EventTrigger EventName="MouseMove">
+                    <B:CallMethodAction MethodName="OnMouseMove" TargetObject="{Binding}"/>
+                </B:EventTrigger>
+            </B:Interaction.Triggers>
+                <Canvas Name="OrginalCanvas" RenderTransformOrigin="0.5,0.5" Width="{Binding Path=GWidth}" Height="{Binding Path=GHeight}" Background="Black">
+                    <Canvas.LayoutTransform>
+                        <TransformGroup>
+                            <ScaleTransform ScaleX="{Binding Path=Sscale}" 
+                                        ScaleY="{Binding Path=Sscale}"/>
+                        </TransformGroup>
+                    </Canvas.LayoutTransform>
+
+                <B:Interaction.Triggers>
+                    <B:EventTrigger EventName="MouseMove">
+                        <B:CallMethodAction MethodName="OrginalCanvas_MouseMove" TargetObject="{Binding}"/>
+
+                    </B:EventTrigger>
+                    <B:EventTrigger EventName="MouseUp">
+                        <B:CallMethodAction MethodName="OrginalCanvas_MouseUp" TargetObject="{Binding}"/>
+
+                    </B:EventTrigger>
+                </B:Interaction.Triggers>
+
+                <Image Name="image1" Source="{Binding Path=image}" Stretch="Uniform" MaxWidth="300" MaxHeight="200" Canvas.Left="{Binding Path=imageleft1}" Canvas.Top="{Binding Path=imagetop1}">
+                    
+                    <B:Interaction.Triggers>
+                        <B:EventTrigger EventName="MouseDown">
+                            <B:CallMethodAction MethodName="image1_MouseDown" TargetObject="{Binding}"/>
+                        </B:EventTrigger>
+                    </B:Interaction.Triggers>
+                    
+                </Image>
+                <Image Name="image2"  Source="{Binding Path=image}" Stretch="Uniform" Canvas.Left="{Binding Path=imageleft2}" Canvas.Top="{Binding Path=imagetop2}" MaxWidth="300" MaxHeight="200">
+
+                    <B:Interaction.Triggers>
+                        <B:EventTrigger EventName="MouseDown">
+                            <B:CallMethodAction MethodName="image2_MouseDown" TargetObject="{Binding}"/>
+                        </B:EventTrigger>
+                    </B:Interaction.Triggers>
+                    
+                </Image>
+                <Image  Name="image3"  Source="{Binding Path=image}" Stretch="Uniform" Canvas.Left="{Binding Path=imageleft3}" Canvas.Top="{Binding Path=imagetop3}" MaxWidth="300" MaxHeight="200">
+
+                    <B:Interaction.Triggers>
+                        <B:EventTrigger EventName="MouseDown">
+                            <B:CallMethodAction MethodName="image3_MouseDown" TargetObject="{Binding}"/>
+                        </B:EventTrigger>
+                    </B:Interaction.Triggers>
+                    
+                </Image>
+
+            </Canvas>
+
+            </ScrollViewer>
+        </Grid>
+    
+</Window>
