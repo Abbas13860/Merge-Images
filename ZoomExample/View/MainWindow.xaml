@@ -58,15 +58,15 @@
                     </B:EventTrigger>
                 </B:Interaction.Triggers>
 
-                <Image  Source="{Binding Path=image}" Stretch="Uniform" Width="{Binding Path=Iwidth1}" Height="{Binding Path=Iheight1}" Canvas.Left="{Binding Path=Cleft1}" Canvas.Top="{Binding Path=Ctop1}"/>
-                <Image  Source="{Binding Path=image}" Stretch="Uniform" Canvas.Left="{Binding Path=Cleft2}" Canvas.Top="{Binding Path=Ctop2}" Width="{Binding Path=Iwidth2}" Height="{Binding Path=Iheight2}"/>
-                <Image  Source="{Binding Path=image}" Stretch="Uniform" Canvas.Left="{Binding Path=Cleft3}" Canvas.Top="{Binding Path=Ctop3}" Width="{Binding Path=Iwidth3}" Height="{Binding Path=Iheight3}"/>
+                <Image  Source="{Binding Path=image}" Stretch="Uniform" Width="{Binding Path=ImageWidth1}" Height="{Binding Path=ImageHeight1}" Canvas.Left="{Binding Path=CanvasLeftSmallImage1}" Canvas.Top="{Binding Path=CanvasTopSmallImage1}"/>
+                <Image  Source="{Binding Path=image}" Stretch="Uniform" Canvas.Left="{Binding Path=CanvasLeftSmallImage2}" Canvas.Top="{Binding Path=CanvasTopSmallImage2}" Width="{Binding Path=ImageWidth2}" Height="{Binding Path=ImageHeight2}"/>
+                <Image  Source="{Binding Path=image}" Stretch="Uniform" Canvas.Left="{Binding Path=CanvasLeftSmallImage3}" Canvas.Top="{Binding Path=CanvasTopSmallImage3}" Width="{Binding Path=ImageWidth3}" Height="{Binding Path=ImageHeight3}"/>
 
 
                 <Rectangle x:Name="MovableShape" Fill="Transparent " 
                            Stroke="Red"  Grid.Row="1" Width="{Binding Path=RectangleWidth}" Height="{Binding Path=RectangleHeight}" 
                            StrokeThickness="1" 
-                           Canvas.Left="{Binding Path=RecLeft}" Canvas.Top="{Binding Path=RecUp}">
+                           Canvas.Left="{Binding Path=RectangleLeft}" Canvas.Top="{Binding Path=RectangleTop}">
                     <B:Interaction.Triggers>
                         <B:EventTrigger EventName="MouseDown">
                             <B:CallMethodAction MethodName="MovableShape_MouseDown" TargetObject="{Binding}"/>
@@ -98,11 +98,11 @@
                     <B:CallMethodAction MethodName="OnMouseMove" TargetObject="{Binding}"/>
                 </B:EventTrigger>
             </B:Interaction.Triggers>
-                <Canvas Name="OrginalCanvas" RenderTransformOrigin="0.5,0.5" Width="{Binding Path=GWidth}" Height="{Binding Path=GHeight}" Background="Black">
+            <Canvas Name="OrginalCanvas" RenderTransformOrigin="0.5,0.5" Width="{Binding Path=BigCanvasWidth}" Height="{Binding Path=BigCanvasHeight}" Background="Black">
                     <Canvas.LayoutTransform>
                         <TransformGroup>
-                            <ScaleTransform ScaleX="{Binding Path=Sscale}" 
-                                        ScaleY="{Binding Path=Sscale}"/>
+                        <ScaleTransform ScaleX="{Binding Path=ScrollViewerScale}" 
+                                        ScaleY="{Binding Path=ScrollViewerScale}"/>
                         </TransformGroup>
                     </Canvas.LayoutTransform>
 
@@ -117,7 +117,7 @@
                     </B:EventTrigger>
                 </B:Interaction.Triggers>
 
-                <Image Name="image1" Source="{Binding Path=image}" Stretch="Uniform" MaxWidth="300" MaxHeight="200" Canvas.Left="{Binding Path=imageleft1}" Canvas.Top="{Binding Path=imagetop1}" >
+                <Image Name="image1" Source="{Binding Path=image}" Stretch="Uniform" Canvas.Left="{Binding Path=CanvasLeftBigImage1}" Canvas.Top="{Binding Path=CanvasTopBigImage1}" >
                     
                     <B:Interaction.Triggers>
                         <B:EventTrigger EventName="MouseDown">
@@ -126,7 +126,7 @@
                     </B:Interaction.Triggers>
                     
                 </Image>
-                <Image Name="image2"  Source="{Binding Path=image}" Stretch="Uniform" Canvas.Left="{Binding Path=imageleft2}" Canvas.Top="{Binding Path=imagetop2}" MaxWidth="300" MaxHeight="200">
+                <Image Name="image2"  Source="{Binding Path=image}" Stretch="Uniform" Canvas.Left="{Binding Path=CanvasLeftBigImage2}" Canvas.Top="{Binding Path=CanvasTopBigImage2}" >
 
                     <B:Interaction.Triggers>
                         <B:EventTrigger EventName="MouseDown">
@@ -135,7 +135,7 @@
                     </B:Interaction.Triggers>
                     
                 </Image>
-                <Image  Name="image3"  Source="{Binding Path=image}" Stretch="Uniform" Canvas.Left="{Binding Path=imageleft3}" Canvas.Top="{Binding Path=imagetop3}" MaxWidth="300" MaxHeight="200">
+                <Image  Name="image3"  Source="{Binding Path=image}" Stretch="Uniform" Canvas.Left="{Binding Path=CanvasLeftBigImage3}" Canvas.Top="{Binding Path=CanvasTopBigImage3}">
 
                     <B:Interaction.Triggers>
                         <B:EventTrigger EventName="MouseDown">

@@ -51,7 +51,7 @@ namespace ZoomExample
             #region Binde
             BitmapImage src = new BitmapImage();
             src.BeginInit();
-            src.UriSource = new Uri(@"E:\ZoomExample\ZoomExample\Images\q_imgfa_ir__5ff8805d722ea_1 (1).jpg", UriKind.Relative);
+            src.UriSource = new Uri(@"E:\ZoomExample\ZoomExample\Images\Captions-about-nature-10.jpg", UriKind.Relative);
             src.CacheOption = BitmapCacheOption.OnLoad;
             src.EndInit();
 
@@ -114,57 +114,57 @@ namespace ZoomExample
 
             }
         }
-        private double _RecUp;
-        public double RecUp
+        private double _RectangleTop;
+        public double RectangleTop
         {
-            get { return _RecUp; }
+            get { return _RectangleTop; }
             set
             {
-                _RecUp = value;
+                _RectangleTop = value;
                 OnPropertyChanged();
 
             }
         }
-        private double _GWidth;
-        public double GWidth
+        private double _BigCanvasWidth;
+        public double BigCanvasWidth
         {
-            get { return _GWidth; }
+            get { return _BigCanvasWidth; }
             set
             {
-                _GWidth = value;
+                _BigCanvasWidth = value;
                 OnPropertyChanged();
 
             }
         }
-        private double _GHeight;
-        public double GHeight
+        private double _BigCanvasHeight;
+        public double BigCanvasHeight
         {
-            get { return _GHeight; }
+            get { return _BigCanvasHeight; }
             set
             {
-                _GHeight = value;
+                _BigCanvasHeight = value;
                 OnPropertyChanged();
 
             }
         }
-        private double _Sscale;
-        public double Sscale
+        private double _ScrollViewerScale;
+        public double ScrollViewerScale
         {
-            get { return _Sscale; }
+            get { return _ScrollViewerScale; }
             set
             {
-                _Sscale = value;
+                _ScrollViewerScale = value;
                 OnPropertyChanged();
 
             }
         }
-        private double _SValue = 1;
-        public double SValue
+        private double _ScaleValue = 1;
+        public double ScaleValue
         {
-            get { return _SValue; }
+            get { return _ScaleValue; }
             set
             {
-                _SValue = value;
+                _ScaleValue = value;
                 OnPropertyChanged();
 
             }
@@ -191,211 +191,211 @@ namespace ZoomExample
 
             }
         }
-        private double _RecScale;
-        public double RecScale
+        private double _RectangleScale;
+        public double RectangleScale
         {
-            get { return _RecScale; }
+            get { return _RectangleScale; }
             set
             {
-                _RecScale = value;
+                _RectangleScale = value;
                 OnPropertyChanged();
 
             }
         }
-        private double _Iwidth1;
-        public double Iwidth1
+        private double _ImageWidth1;
+        public double ImageWidth1
         {
-            get { return _Iwidth1; }
+            get { return _ImageWidth1; }
             set
             {
-                _Iwidth1 = value;
+                _ImageWidth1 = value;
                 OnPropertyChanged();
 
             }
         }
-        private double _Iheight1;
-        public double Iheight1
+        private double _ImageHeight1;
+        public double ImageHeight1
         {
-            get { return _Iheight1; }
+            get { return _ImageHeight1; }
             set
             {
-                _Iheight1 = value;
+                _ImageHeight1 = value;
                 OnPropertyChanged();
 
             }
         }
-        private double _Iwidth2;
-        public double Iwidth2
+        private double _ImageWidth2;
+        public double ImageWidth2
         {
-            get { return _Iwidth2; }
+            get { return _ImageWidth2; }
             set
             {
-                _Iwidth2 = value;
+                _ImageWidth2 = value;
                 OnPropertyChanged();
 
             }
         }
-        private double _Iheight2;
-        public double Iheight2
+        private double _ImageHeight2;
+        public double ImageHeight2
         {
-            get { return _Iheight2; }
+            get { return _ImageHeight2; }
             set
             {
-                _Iheight2 = value;
+                _ImageHeight2 = value;
                 OnPropertyChanged();
 
             }
         }
-        private double _Iwidth3;
-        public double Iwidth3
+        private double _ImageWidth3;
+        public double ImageWidth3
         {
-            get { return _Iwidth3; }
+            get { return _ImageWidth3; }
             set
             {
-                _Iwidth3 = value;
+                _ImageWidth3 = value;
                 OnPropertyChanged();
 
             }
         }
-        private double _Iheight3;
-        public double Iheight3
+        private double _ImageHeight3;
+        public double ImageHeight3
         {
-            get { return _Iheight3; }
+            get { return _ImageHeight3; }
             set
             {
-                _Iheight3 = value;
+                _ImageHeight3 = value;
                 OnPropertyChanged();
 
             }
         }
-        private double _Ctop1;
-        public double Ctop1
+        private double _CanvasTopSmallImage1;
+        public double CanvasTopSmallImage1
         {
-            get { return _Ctop1; }
+            get { return _CanvasTopSmallImage1; }
             set
             {
-                _Ctop1 = value;
+                _CanvasTopSmallImage1 = value;
                 OnPropertyChanged();
 
             }
         }
-        private double _Cleft1;
-        public double Cleft1
+        private double _CanvasLeftSmallImage1;
+        public double CanvasLeftSmallImage1
         {
-            get { return _Cleft1; }
+            get { return _CanvasLeftSmallImage1; }
             set
             {
-                _Cleft1 = value;
+                _CanvasLeftSmallImage1 = value;
                 OnPropertyChanged();
 
             }
         }
-        private double _Ctop2;
-        public double Ctop2
+        private double _CanvasTopSmallImage2;
+        public double CanvasTopSmallImage2
         {
-            get { return _Ctop2; }
+            get { return _CanvasTopSmallImage2; }
             set
             {
-                _Ctop2 = value;
+                _CanvasTopSmallImage2 = value;
                 OnPropertyChanged();
 
             }
         }
-        private double _Cleft2;
-        public double Cleft2
+        private double _CanvasLeftSmallImage2;
+        public double CanvasLeftSmallImage2
         {
-            get { return _Cleft2; }
+            get { return _CanvasLeftSmallImage2; }
             set
             {
-                _Cleft2 = value;
+                _CanvasLeftSmallImage2 = value;
                 OnPropertyChanged();
 
             }
         }
-        private double _Ctop3;
-        public double Ctop3
+        private double _CanvasTopSmallImage3;
+        public double CanvasTopSmallImage3
         {
-            get { return _Ctop3; }
+            get { return _CanvasTopSmallImage3; }
             set
             {
-                _Ctop3 = value;
+                _CanvasTopSmallImage3 = value;
                 OnPropertyChanged();
 
             }
         }
-        private double _Cleft3;
-        public double Cleft3
+        private double _CanvasLeftSmallImage3;
+        public double CanvasLeftSmallImage3
         {
-            get { return _Cleft3; }
+            get { return _CanvasLeftSmallImage3; }
             set
             {
-                _Cleft3 = value;
+                _CanvasLeftSmallImage3 = value;
                 OnPropertyChanged();
 
             }
         }
-        private double _imageleft1;
-        public double imageleft1
+        private double _CanvasLeftBigImage1;
+        public double CanvasLeftBigImage1
         {
-            get { return _imageleft1; }
+            get { return _CanvasLeftBigImage1; }
             set
             {
-                _imageleft1 = value;
+                _CanvasLeftBigImage1 = value;
                 OnPropertyChanged();
 
             }
         }
-        private double _imagetop1;
-        public double imagetop1
+        private double _CanvasTopBigImage1;
+        public double CanvasTopBigImage1
         {
-            get { return _imagetop1; }
+            get { return _CanvasTopBigImage1; }
             set
             {
-                _imagetop1 = value;
+                _CanvasTopBigImage1 = value;
                 OnPropertyChanged();
 
             }
         }
-        private double _imageleft2;
-        public double imageleft2
+        private double _CanvasLeftBigImage2;
+        public double CanvasLeftBigImage2
         {
-            get { return _imageleft2; }
+            get { return _CanvasLeftBigImage2; }
             set
             {
-                _imageleft2 = value;
+                _CanvasLeftBigImage2 = value;
                 OnPropertyChanged();
 
             }
         }
-        private double _imagetop2;
-        public double imagetop2
+        private double _CanvasTopBigImage2;
+        public double CanvasTopBigImage2
         {
-            get { return _imagetop2; }
+            get { return _CanvasTopBigImage2; }
             set
             {
-                _imagetop2 = value;
+                _CanvasTopBigImage2 = value;
                 OnPropertyChanged();
 
             }
         }
-        private double _imageleft3;
-        public double imageleft3
+        private double _CanvasLeftBigImage3;
+        public double CanvasLeftBigImage3
         {
-            get { return _imageleft3; }
+            get { return _CanvasLeftBigImage3; }
             set
             {
-                _imageleft3 = value;
+                _CanvasLeftBigImage3 = value;
                 OnPropertyChanged();
 
             }
         }
-        private double _imagetop3;
-        public double imagetop3
+        private double _CanvasTopBigImage3;
+        public double CanvasTopBigImage3
         {
-            get { return _imagetop3; }
+            get { return _CanvasTopBigImage3; }
             set
             {
-                _imagetop3 = value;
+                _CanvasTopBigImage3 = value;
                 OnPropertyChanged();
 
             }
@@ -434,19 +434,19 @@ namespace ZoomExample
                 var PR = e.GetPosition(Rectangle);
 
                 Point2 = PR;
-                double TMPL= RectangleLeft + Point2.X - Point1.X; 
-                double TMPU=RecUp+ Point2.Y - Point1.Y;
+                double TMPLeft= RectangleLeft + Point2.X - Point1.X; 
+                double TMPTop = RectangleTop + Point2.Y - Point1.Y;
 
-                if (TMPL > 0 && TMPU > 0 && TMPL <= SmallCanvasWidth - RectangleWidth && TMPU <= SmallCanvasHeight - RectangleHeight)
+                if (TMPLeft > 0 && TMPTop > 0 && TMPLeft <= SmallCanvasWidth - RectangleWidth && TMPTop <= SmallCanvasHeight - RectangleHeight)
                 {
-                    RectangleLeft = TMPL;
-                    RecUp = TMPU;
+                    RectangleLeft = TMPLeft;
+                    RectangleTop = TMPTop;
                 }
 
-                if (RectangleLeft > 0 || RecUp > 0)
+                if (RectangleLeft > 0 || RectangleTop > 0)
                 {
                     Copyscrollviewer.ScrollToHorizontalOffset((RectangleLeft * Copyscrollviewer.ScrollableWidth) / (SmallCanvasWidth - RectangleWidth));
-                    Copyscrollviewer.ScrollToVerticalOffset((RecUp * Copyscrollviewer.ScrollableHeight) / (SmallCanvasHeight - RectangleHeight));
+                    Copyscrollviewer.ScrollToVerticalOffset((RectangleTop * Copyscrollviewer.ScrollableHeight) / (SmallCanvasHeight - RectangleHeight));
                 }
             }
 
@@ -490,26 +490,26 @@ namespace ZoomExample
             {
 
                
-                if (SValue < 5)
+                if (ScaleValue < 5)
                 {
 
 
-                    SValue += 1;
-                    Sscale *= 2;
+                    ScaleValue += 1;
+                    ScrollViewerScale *= 2;
 
-                    ScrollViewerNewExtentWidth = GWidth * Sscale;
-                    ScrollViewerNewExtentHeight = GHeight * Sscale;
+                    ScrollViewerNewExtentWidth = BigCanvasWidth * ScrollViewerScale;
+                    ScrollViewerNewExtentHeight = BigCanvasHeight * ScrollViewerScale;
 
-                    RecScale = ScrollViewerNewExtentWidth / SmallCanvasWidth;
-                    if (SmallCanvasHeight * RecScale > ScrollViewerNewExtentHeight)
+                    RectangleScale = ScrollViewerNewExtentWidth / SmallCanvasWidth;
+                    if (SmallCanvasHeight * RectangleScale > ScrollViewerNewExtentHeight)
                     {
-                        RecScale = ScrollViewerNewExtentHeight / SmallCanvasHeight;
+                        RectangleScale = ScrollViewerNewExtentHeight / SmallCanvasHeight;
                     }
 
                     
 
-                    rectanglewidthtemp = scrollViewer.ViewportWidth /RecScale;
-                    rectangleheighttemp = scrollViewer.ViewportHeight / RecScale;
+                    rectanglewidthtemp = scrollViewer.ViewportWidth / RectangleScale;
+                    rectangleheighttemp = scrollViewer.ViewportHeight / RectangleScale;
                     RectangleWidth = rectanglewidthtemp;
                     RectangleHeight = rectangleheighttemp;
 
@@ -522,20 +522,20 @@ namespace ZoomExample
 
                 if (scrollViewer.ScrollableWidth!=0||scrollViewer.ScrollableHeight!=0)
                 {
-                    Sscale /= 2;
+                    ScrollViewerScale /= 2;
 
-                    ScrollViewerNewExtentWidth = GWidth * Sscale;
-                    ScrollViewerNewExtentHeight = GHeight * Sscale;
+                    ScrollViewerNewExtentWidth = BigCanvasWidth * ScrollViewerScale;
+                    ScrollViewerNewExtentHeight = BigCanvasHeight * ScrollViewerScale;
 
-                    RecScale = ScrollViewerNewExtentWidth / SmallCanvasWidth;
-                    if (SmallCanvasHeight * RecScale > ScrollViewerNewExtentHeight)
+                    RectangleScale = ScrollViewerNewExtentWidth / SmallCanvasWidth;
+                    if (SmallCanvasHeight * RectangleScale > ScrollViewerNewExtentHeight)
                     {
-                        RecScale = ScrollViewerNewExtentHeight / SmallCanvasHeight;
+                        RectangleScale = ScrollViewerNewExtentHeight / SmallCanvasHeight;
                     }
 
-                    rectanglewidthtemp = scrollViewer.ViewportWidth / RecScale;
-                    rectangleheighttemp = scrollViewer.ViewportHeight / RecScale;
-                    SValue -= 1;
+                    rectanglewidthtemp = scrollViewer.ViewportWidth / RectangleScale;
+                    rectangleheighttemp = scrollViewer.ViewportHeight / RectangleScale;
+                    ScaleValue -= 1;
                     RectangleWidth = rectanglewidthtemp;
                     RectangleHeight = rectangleheighttemp;
                 }
@@ -609,7 +609,7 @@ namespace ZoomExample
             double rwidth = scrollViewer.HorizontalOffset;
             double rheight = scrollViewer.VerticalOffset;
 
-            RecUp = ((SmallCanvasHeight - RectangleHeight) * scrollViewer.VerticalOffset) / scrollViewer.ScrollableHeight;
+            RectangleTop = ((SmallCanvasHeight - RectangleHeight) * scrollViewer.VerticalOffset) / scrollViewer.ScrollableHeight;
             RectangleLeft = ((SmallCanvasWidth - RectangleWidth) * scrollViewer.HorizontalOffset) / scrollViewer.ScrollableWidth;
 
 
@@ -669,30 +669,30 @@ namespace ZoomExample
 
             if (MainWindowSizeChanged == true)
             {
-                ScrollViewerNewExtentWidth = image.Width * Sscale;
-                ScrollViewerNewExtentHeight = image.Height * Sscale;
+                ScrollViewerNewExtentWidth = image.Width * ScrollViewerScale;
+                ScrollViewerNewExtentHeight = image.Height * ScrollViewerScale;
 
                
 
-                rectanglewidthtemp = scrollviewerViewportWidth / RecScale;
-                rectangleheighttemp = scrollviewerViewportHeight / RecScale;
+                rectanglewidthtemp = scrollviewerViewportWidth / RectangleScale;
+                rectangleheighttemp = scrollviewerViewportHeight / RectangleScale;
                 RectangleWidth = rectanglewidthtemp;
                 RectangleHeight = rectangleheighttemp;
 
-               GWidth = scrollViewer.ViewportWidth;
-               GHeight = scrollViewer.ViewportHeight;
+                BigCanvasWidth = scrollViewer.ViewportWidth;
+                BigCanvasHeight = scrollViewer.ViewportHeight;
 
-               CanvasRatio = GHeight / SmallCanvasHeight;
+               CanvasRatio = BigCanvasHeight / SmallCanvasHeight;
 
-                SmallCanvasWidth = GWidth / nextCanvasRatio;
-                SmallCanvasHeight = GHeight / nextCanvasRatio;
+                SmallCanvasWidth = BigCanvasWidth / nextCanvasRatio;
+                SmallCanvasHeight = BigCanvasHeight / nextCanvasRatio;
             }
 
-            RecUp = ((SmallCanvasHeight - RectangleHeight) * scrollViewer.VerticalOffset) / scrollViewer.ScrollableHeight;
+            RectangleTop = ((SmallCanvasHeight - RectangleHeight) * scrollViewer.VerticalOffset) / scrollViewer.ScrollableHeight;
             RectangleLeft = ((SmallCanvasWidth - RectangleWidth) * scrollViewer.HorizontalOffset) / scrollViewer.ScrollableWidth;
 
-            GWidth = scrollViewer.ViewportWidth;
-            GHeight = scrollViewer.ViewportHeight;
+            BigCanvasWidth = scrollViewer.ViewportWidth;
+            BigCanvasHeight = scrollViewer.ViewportHeight;
 
             
         }
@@ -710,11 +710,11 @@ namespace ZoomExample
                 var PR = e.GetPosition(image1);
 
                 Point2 = PR;
-                double TMPL = imageleft1 + Point2.X - Point1.X;
-                double TMPU = imagetop1 + Point2.Y - Point1.Y;
+                double TMPLeft = CanvasLeftBigImage1 + Point2.X - Point1.X;
+                double TMPTop = CanvasTopBigImage1 + Point2.Y - Point1.Y;
 
-                imageleft1 = TMPL;
-                imagetop1 = TMPU;
+                CanvasLeftBigImage1 = TMPLeft;
+                CanvasTopBigImage1 = TMPTop;
             }
             if (image2drag)
             {
@@ -722,11 +722,11 @@ namespace ZoomExample
                 var PR = e.GetPosition(image2);
 
                 Point2 = PR;
-                double TMPL = imageleft2 + Point2.X - Point1.X;
-                double TMPU = imagetop2 + Point2.Y - Point1.Y;
+                double TMPLeft = CanvasLeftBigImage2 + Point2.X - Point1.X;
+                double TMPTop = CanvasTopBigImage2 + Point2.Y - Point1.Y;
 
-                imageleft2 = TMPL;
-                imagetop2 = TMPU;
+                CanvasLeftBigImage2 = TMPLeft;
+                CanvasTopBigImage2 = TMPTop;
             }
             if (image3drag)
             {
@@ -734,20 +734,20 @@ namespace ZoomExample
                 var PR = e.GetPosition(image3);
 
                 Point2 = PR;
-                double TMPL = imageleft3 + Point2.X - Point1.X;
-                double TMPU = imagetop3 + Point2.Y - Point1.Y;
+                double TMPLeft = CanvasLeftBigImage3 + Point2.X - Point1.X;
+                double TMPTop = CanvasTopBigImage3 + Point2.Y - Point1.Y;
 
-                imageleft3 = TMPL;
-                imagetop3 = TMPU;
+                CanvasLeftBigImage3 = TMPLeft;
+                CanvasTopBigImage3 = TMPTop;
             }
-           
 
-            Ctop1 = Canvas.GetTop(image1) / CanvasRatio;
-            Cleft1 = Canvas.GetLeft(image1) / CanvasRatio;
-            Ctop2 = Canvas.GetTop(image2) / CanvasRatio;
-            Cleft2 = Canvas.GetLeft(image2) / CanvasRatio;
-            Ctop3 = Canvas.GetTop(image3) / CanvasRatio;
-            Cleft3 = Canvas.GetLeft(image3) / CanvasRatio;
+
+            CanvasTopSmallImage1 = Canvas.GetTop(image1) / CanvasRatio;
+            CanvasLeftSmallImage1 = Canvas.GetLeft(image1) / CanvasRatio;
+            CanvasTopSmallImage2 = Canvas.GetTop(image2) / CanvasRatio;
+            CanvasLeftSmallImage2 = Canvas.GetLeft(image2) / CanvasRatio;
+            CanvasTopSmallImage3 = Canvas.GetTop(image3) / CanvasRatio;
+            CanvasLeftSmallImage3 = Canvas.GetLeft(image3) / CanvasRatio;
 
 
         }
@@ -818,8 +818,8 @@ namespace ZoomExample
 
             Copyscrollviewer = scrollViewer;
 
-            GWidth = scrollViewer.ViewportWidth;
-            GHeight = scrollViewer.ViewportHeight;
+            BigCanvasWidth = scrollViewer.ViewportWidth;
+            BigCanvasHeight = scrollViewer.ViewportHeight;
 
 
             SmallCanvasWidth =300;
@@ -827,9 +827,9 @@ namespace ZoomExample
             RectangleWidth = SmallCanvasWidth;
             RectangleHeight = SmallCanvasHeight;
 
-            Sscale = 1;
+            ScrollViewerScale = 1;
 
-            CanvasRatio = GHeight / SmallCanvasHeight;
+            CanvasRatio = BigCanvasHeight / SmallCanvasHeight;
             nextCanvasRatio = CanvasRatio;
 
             rectanglewidthtemp = SmallCanvasWidth;
@@ -837,12 +837,12 @@ namespace ZoomExample
 
 
 
-            Iwidth1 = image1.ActualWidth / CanvasRatio;
-            Iheight1 = image1.ActualHeight / CanvasRatio;
-            Iwidth2 = image2.ActualWidth / CanvasRatio;
-            Iheight2 = image2.ActualHeight / CanvasRatio;
-            Iwidth3 = image3.ActualWidth / CanvasRatio;
-            Iheight3 = image3.ActualHeight / CanvasRatio;
+            ImageWidth1 = image1.ActualWidth / CanvasRatio;
+            ImageHeight1 = image1.ActualHeight / CanvasRatio;
+            ImageWidth2 = image2.ActualWidth / CanvasRatio;
+            ImageHeight2 = image2.ActualHeight / CanvasRatio;
+            ImageWidth3 = image3.ActualWidth / CanvasRatio;
+            ImageHeight3 = image3.ActualHeight / CanvasRatio;
 
            
         }
