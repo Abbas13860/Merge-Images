@@ -39,8 +39,8 @@
             
 
             <Canvas Name="CanvasImplant" 
-                    Width="{Binding Path=Cwidth}" 
-                    Height="{Binding Path=CHeight}"
+                    Width="{Binding Path=SmallCanvasWidth}" 
+                    Height="{Binding Path=SmallCanvasHeight}"
                 VerticalAlignment="Stretch"
                     HorizontalAlignment="Stretch"
                     Grid.Row="1"
@@ -64,7 +64,7 @@
 
 
                 <Rectangle x:Name="MovableShape" Fill="Transparent " 
-                           Stroke="Red"  Grid.Row="1" Width="{Binding Path=Recwidth}" Height="{Binding Path=RecHeight}" 
+                           Stroke="Red"  Grid.Row="1" Width="{Binding Path=RectangleWidth}" Height="{Binding Path=RectangleHeight}" 
                            StrokeThickness="1" 
                            Canvas.Left="{Binding Path=RecLeft}" Canvas.Top="{Binding Path=RecUp}">
                     <B:Interaction.Triggers>
@@ -117,7 +117,7 @@
                     </B:EventTrigger>
                 </B:Interaction.Triggers>
 
-                <Image Name="image1" Source="{Binding Path=image}" Stretch="Uniform" MaxWidth="300" MaxHeight="200" Canvas.Left="{Binding Path=imageleft1}" Canvas.Top="{Binding Path=imagetop1}">
+                <Image Name="image1" Source="{Binding Path=image}" Stretch="Uniform" MaxWidth="300" MaxHeight="200" Canvas.Left="{Binding Path=imageleft1}" Canvas.Top="{Binding Path=imagetop1}" >
                     
                     <B:Interaction.Triggers>
                         <B:EventTrigger EventName="MouseDown">

@@ -70,7 +70,7 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Page Include="MainWindow.xaml">
+    <Page Include="View\MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
@@ -84,11 +84,16 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="View\Resources.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="MainWindow.xaml.cs">
+    <Compile Include="View\MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
     </Compile>
+    <Compile Include="ViewModel\MainWindowVM.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -115,15 +120,18 @@
     <AppDesigner Include="Properties\" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="q_imgfa_ir__5ff8805d722ea_1 %281%29.jpg" />
-    <Resource Include="Captions-about-nature-10.jpg" />
-    <Resource Include="a.jpg" />
-    <Resource Include="Gray348.png" />
-    <Resource Include="24701-nature-natural-beauty.jpg" />
-    <Resource Include="3f38b1d108089d7ece347bacbeb3aee6.jpg" />
-    <Resource Include="city_buildings_architecture_214576_3840x2160.jpg" />
-    <Resource Include="download.jpg" />
-    <Content Include="Image1.jpg" />
+    <Resource Include="Images\q_imgfa_ir__5ff8805d722ea_1 %281%29.jpg" />
+    <Resource Include="Images\Captions-about-nature-10.jpg" />
+    <Resource Include="Images\a.jpg" />
+    <Resource Include="Images\Gray348.png" />
+    <Resource Include="Images\24701-nature-natural-beauty.jpg" />
+    <Resource Include="Images\3f38b1d108089d7ece347bacbeb3aee6.jpg" />
+    <Resource Include="Images\city_buildings_architecture_214576_3840x2160.jpg" />
+    <Resource Include="Images\download.jpg" />
+    <Content Include="Images\Image1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Model\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
